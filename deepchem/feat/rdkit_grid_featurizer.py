@@ -1318,7 +1318,7 @@ class RdkitGridFeaturizer(ComplexFeaturizer):
     features = []
     for i, (mol_file, protein_pdb) in enumerate(zip(mol_files, protein_pdbs)):
       if i % log_every_n == 0:
-        log("Featurizing %d / %d" % (i, len(mol_files)))
+        log("Featurizing %d / %d" % (i, len(mol_files)), self.verbose)
       ligand_ext = get_ligand_filetype(mol_file)
       with open(mol_file) as mol_f:
         mol_lines = mol_f.readlines()
